@@ -1,0 +1,5 @@
+# Ignore artifacts:
+# -----------------
+
+# Ignore Rails Asset Builds
+app/assets/builds/**/*

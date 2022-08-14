@@ -1,0 +1,11 @@
+# Ignore artifacts:
+# -----------------
+
+# Ignore Rails Asset Builds
+app/assets/builds/**/*
+
+# Ignore ESBuild Configuration
+esbuild.config.mjs
+
+# Ignore ESLint Configuration
+.eslintrc.js
