@@ -21,7 +21,7 @@ esbuild
     // Remove unused JS methods
     treeShaking: true,
     // Build command log output: https://esbuild.github.io/api/#log-level
-    logLevel: 'verbose',
+    logLevel: 'info',
     // Set of ESLint plugins
     plugins: [
       // Plugin to easily import Rails JS files, such as Stimulus controllers and channels
