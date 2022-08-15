@@ -8,8 +8,8 @@
 const bundlewatchConfig = {
   files: [
     {
-      path: './app/assets/builds/application.js',
-      maxSize: '2000kb',
+      path: './app/assets/builds/*.js',
+      maxSize: '1000kb',
       compression: 'none'
     }
   ],
