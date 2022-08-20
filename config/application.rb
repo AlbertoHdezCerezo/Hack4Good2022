@@ -11,6 +11,11 @@ module AlbertTemplate
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    # ViewComponent Configuration
+    # ===========================
+    # Set up preview layout
+    config.view_component.default_preview_layout = "component_preview"
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

@@ -1,6 +1,13 @@
 ENV["RAILS_ENV"] ||= "test"
+
+# Default Rails Helpers
+# ---------------------
 require_relative "../config/environment"
 require "rails/test_help"
+
+# Gem Test Helpers
+# ================
+#
 
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
