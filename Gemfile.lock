@@ -97,6 +97,9 @@ GEM
     ffi (1.15.5)
     globalid (1.0.0)
       activesupport (>= 5.0)
+    haml (5.2.2)
+      temple (>= 0.8.0)
+      tilt
     htmlbeautifier (1.4.2)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
@@ -131,12 +134,6 @@ GEM
     method_source (1.0.0)
     mini_mime (1.1.2)
     minitest (5.16.2)
-    minitest-rails (7.0.0)
-      minitest (~> 5.10)
-      railties (~> 7.0.0)
-    minitest-rails-capybara (0.0.2)
-      capybara
-      minitest-rails
     msgpack (1.5.4)
     net-imap (0.2.3)
       digest
@@ -240,7 +237,9 @@ GEM
     stimulus-rails (1.1.0)
       railties (>= 6.0.0)
     strscan (3.0.4)
+    temple (0.8.2)
     thor (1.2.1)
+    tilt (2.0.11)
     timeout (0.3.0)
     turbo-rails (1.1.1)
       actionpack (>= 6.0.0)
@@ -283,11 +282,10 @@ DEPENDENCIES
   bullet
   capybara
   debug
+  haml
   jbuilder
   jsbundling-rails
   lookbook
-  minitest-rails
-  minitest-rails-capybara
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)

@@ -37,7 +37,8 @@ class ApplicationComponent < ViewComponent::Base
   end
 
   def call
-    tag.div("This is the application component", **wrapper_attributes)
+    attributes = wrapper_attributes.merge({ data: { controller: "application-component" } })
+    tag.div("This is the application component", **attributes)
   end
 
   private
