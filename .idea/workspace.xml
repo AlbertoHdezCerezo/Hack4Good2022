@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Fix sample component test">
-      <change afterPath="$PROJECT_DIR$/app/views/layouts/preview_layout.html.haml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/components/previews/common/tailwind_component_preview.rb" afterDir="false" />
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Add tailwind configuration preview">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +82,8 @@
       <recent name="$PROJECT_DIR$/app/assets/stylesheets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/system/components" />
+      <recent name="$PROJECT_DIR$/test/components/previews" />
       <recent name="$PROJECT_DIR$/config" />
       <recent name="$PROJECT_DIR$/app/javascript/css" />
     </key>
@@ -254,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661084630833</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add tailwind configuration preview">
+      <created>1661103428352</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1661103428352</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,6 +284,7 @@
     <MESSAGE value="Added configuration for TailwindCSS" />
     <MESSAGE value="Fix TailwindCSS content configuration" />
     <MESSAGE value="Fix sample component test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix sample component test" />
+    <MESSAGE value="Add tailwind configuration preview" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add tailwind configuration preview" />
   </component>
 </project>

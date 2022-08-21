@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -8,7 +10,10 @@ module.exports = {
     './app/views/**/*'
   ],
   theme: {
-    extend: {}
+    fontFamily: {
+      primary: ['nitti, monospace', ...defaultTheme.fontFamily.sans],
+      secondary: ['bilo, sans-serif']
+    }
   },
   variants: {},
   plugins: []
