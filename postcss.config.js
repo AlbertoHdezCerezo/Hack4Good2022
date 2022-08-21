@@ -2,7 +2,6 @@
 // https://dev.to/vinbak/adding-tailwindcss-to-your-rails-project-with-postcss-7-compatibility-2o81
 module.exports = {
   plugins: [
-    require('autoprefixer'),
     // Imports TailwindCSS
     require('tailwindcss')('./config/tailwind.config.js'),
     // Easy importing of local, node or web CSS files

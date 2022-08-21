@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Added configuration for TailwindCSS">
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" />
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Fix TailwindCSS content configuration">
+      <change beforePath="$PROJECT_DIR$/.bundlewatch.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/.bundlewatch.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/sample_component.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/sample_component.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/component_preview.html.haml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,7 +210,7 @@
       <workItem from="1660582697407" duration="128000" />
       <workItem from="1660582841319" duration="1043000" />
       <workItem from="1661020949297" duration="1420000" />
-      <workItem from="1661075862881" duration="4677000" />
+      <workItem from="1661075862881" duration="5344000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1660494713128</created>
@@ -237,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661080328093</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fix TailwindCSS content configuration">
+      <created>1661080785485</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661080785485</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,6 +268,7 @@
     <MESSAGE value="First commit" />
     <MESSAGE value="Add ViewComponent &amp; Lookbook gems" />
     <MESSAGE value="Added configuration for TailwindCSS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added configuration for TailwindCSS" />
+    <MESSAGE value="Fix TailwindCSS content configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix TailwindCSS content configuration" />
   </component>
 </project>
