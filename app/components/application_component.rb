@@ -36,11 +36,6 @@ class ApplicationComponent < ViewComponent::Base
     super
   end
 
-  def call
-    attributes = wrapper_attributes.merge({ data: { controller: "application-component" } })
-    tag.div("This is the application component", **attributes)
-  end
-
   private
 
   def concat_html_attributes(html_attributes)

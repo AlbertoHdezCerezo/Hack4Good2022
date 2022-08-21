@@ -1,8 +1,8 @@
 require "test_helper"
 
-class ExampleComponentTest < ViewComponent::TestCase
+class SampleComponentTest < ViewComponent::TestCase
   def setup
-    @component = ApplicationComponent
+    @component = SampleComponent
   end
 
   def test_render_component
