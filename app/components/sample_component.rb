@@ -3,7 +3,7 @@
 # Base project component class
 class SampleComponent < ApplicationComponent
   def call
-    tag.div do
+    tag.div(**wrapper_attributes) do
       tag.h1("Hey There!")
     end
   end
