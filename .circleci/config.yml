@@ -1,0 +1,43 @@
+version: 2.1
+
+# Definition of environments where jobs will be executed
+executors:
+  # Ruby environment
+  ruby-on-rails:
+    # Jobs will be run in a docker container
+    docker:
+      # Ruby + Node + Selenium environment (ideal for testing)
+      - image: cimg/ruby:3.1.2-browsers
+        # Reference: https://circleci.com/docs/language-ruby
+        environment:
+          # Bundler Configuration
+          # ---------------------
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+          # Disable changes in Gemfile
+          BUNDLE_FROZEN: true
+          # Database Configuration
+          # ----------------------
+          PGHOST: 127.0.0.1
+          PGUSER: albert-ci
+          PGPASSWORD: ""
+          # Rails environment Configuration
+          # -------------------------------
+          RAILS_ENV: test
+
+      - image: cimg/postgres:13.4
+        environment:
+          POSTGRES_USER: albert-ci
+          POSTGRES_DB: Albert_Template_test
+          POSTGRES_PASSWORD: ""
+
+jobs:
+  bundle:
+    working_directory: ~/app
+    executor: ruby-on-rails
+    steps:
+      - checkout
+      - run:
+          name: install bundler
+          command: gem install bundler

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Add tailwind configuration preview">
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Add font configuration to TailwindCSS">
+      <change afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/tailwind.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +72,8 @@
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/prettier",
     "ruby.rails.projectView.checked": "true",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "/Applications/RubyMine.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -211,6 +212,7 @@
       <workItem from="1660582841319" duration="1043000" />
       <workItem from="1661020949297" duration="1420000" />
       <workItem from="1661075862881" duration="5344000" />
+      <workItem from="1661192998791" duration="1467000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1660494713128</created>
@@ -261,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661103428352</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add font configuration to TailwindCSS">
+      <created>1661105334065</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1661105334065</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,6 +294,7 @@
     <MESSAGE value="Fix TailwindCSS content configuration" />
     <MESSAGE value="Fix sample component test" />
     <MESSAGE value="Add tailwind configuration preview" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add tailwind configuration preview" />
+    <MESSAGE value="Add font configuration to TailwindCSS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add font configuration to TailwindCSS" />
   </component>
 </project>
