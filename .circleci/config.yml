@@ -41,3 +41,8 @@ jobs:
       - run:
           name: install bundler
           command: gem install bundler
+
+workflows:
+  run_tests:
+    jobs:
+      - bundle
