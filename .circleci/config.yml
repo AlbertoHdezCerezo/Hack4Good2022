@@ -38,6 +38,7 @@ jobs:
     working_directory: ~/app
     executor: ruby-on-rails
     steps:
+      - checkout
       - restore_cache:
           name: Restore npm packages cache
           keys:
