@@ -53,12 +53,9 @@ executors:
           POSTGRES_DB: Albert_Template_test
           POSTGRES_PASSWORD: ""
 
-jobs:
+commands:
   install-npm-packages:
-    working_directory: ~/app
-    executor: bundler
     steps:
-      - checkout
       - restore_cache:
           name: Restore npm packages cache
           keys:
@@ -74,6 +71,14 @@ jobs:
           paths:
             - ~/.cache/yarn
           key: yarn-cache-v4-{{ .Branch }}-{{ checksum "yarn.lock" }}
+
+jobs:
+  install-npm-packages:
+    working_directory: ~/app
+    executor: bundler
+    steps:
+      - checkout
+      - install-npm-packages
 
   install-ruby-gems:
     working_directory: ~/app
