@@ -90,7 +90,9 @@ jobs:
           name: Install gems if not cached
           command: |
             gem install bundler
-            bundle check || bundle install --deployment --jobs=6 --retry=3 --path vendor/bundle
+            bundle config set --local deployment 'true'
+            bundle config set --local path 'vendor/bundle'
+            bundle check || bundle install --jobs=6 --retry=3
       - save_cache:
           name: Save installed gems in cache
           paths:
