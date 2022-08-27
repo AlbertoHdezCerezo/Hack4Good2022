@@ -168,6 +168,9 @@ commands:
     steps:
       - run:
           name: Generate bundlewatch report
+          command: ls
+      - run:
+          name: Generate bundlewatch report
           command: bundlewatch --config .bundlewatch.config.js
 
   ruby-linter:
