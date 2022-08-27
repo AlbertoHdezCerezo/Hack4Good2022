@@ -109,6 +109,14 @@ commands:
           name: Run all tests
           command: bundle exec rails test:all
 
+  ruby-linter:
+    description: |
+      Run rubocop linter.
+    steps:
+      - run:
+          name: Run rubocop linter
+          command: rubocop
+
 jobs:
   run-tests:
     working_directory: ~/app
@@ -127,3 +135,6 @@ workflows:
   run_tests:
     jobs:
       - run-tests
+      - ruby-linter:
+          requires:
+            - run-tests
