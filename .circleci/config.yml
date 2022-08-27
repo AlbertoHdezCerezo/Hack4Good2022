@@ -114,6 +114,9 @@ commands:
       Run rubocop linter.
     steps:
       - run:
+          name: Install rubocop
+          command: gem install rubocop
+      - run:
           name: Run rubocop linter
           command: rubocop
 
