@@ -212,7 +212,7 @@
       <workItem from="1661020949297" duration="1420000" />
       <workItem from="1661075862881" duration="5344000" />
       <workItem from="1661192998791" duration="3594000" />
-      <workItem from="1661583735877" duration="1113000" />
+      <workItem from="1661583735877" duration="1390000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1660494713128</created>
@@ -326,7 +326,21 @@
       <option name="project" value="LOCAL" />
       <updated>1661584913573</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Optimize bundler installation with a new bundler executor">
+      <created>1661585248471</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1661585248471</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Optimize bundler installation with a new bundler executor">
+      <created>1661585367334</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1661585367334</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
