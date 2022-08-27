@@ -95,10 +95,17 @@ jobs:
           name: Run all tests
           command: bundle exec rails test:all
 
+# Definition of workflows
 workflows:
+  # Run application test suite
   run_tests:
     jobs:
       - install-ruby-gems
       - install-npm-packages
-      - configure-database
-      - run-tests
+      - configure-database:
+          requires:
+            - install-ruby-gems
+            - install-npm-packages
+      - run-tests:
+          requires:
+            - configure-database
