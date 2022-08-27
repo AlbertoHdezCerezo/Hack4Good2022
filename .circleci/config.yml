@@ -53,6 +53,16 @@ executors:
           POSTGRES_PASSWORD: ""
 
 commands:
+  checkout-repo:
+    description: |
+      Pull repository and add it to workspace.
+    steps:
+      - checkout
+      - persist_to_workspace:
+          root: ~/app
+          paths:
+            - .
+
   install-npm-packages:
     description: |
       Install NPM packages (or restore from cache) and update NPM cache if needed.
@@ -73,6 +83,10 @@ commands:
           paths:
             - ~/.cache/yarn
           key: yarn-cache-v4-{{ .Branch }}-{{ checksum "yarn.lock" }}
+      - persist_to_workspace:
+          root: ~/.cache/yarn
+          paths:
+           - .
 
   install-bundler:
     steps:
@@ -132,6 +146,30 @@ commands:
           name: Run all tests
           command: bundle exec rails test:all
 
+  compile-assets:
+    description: |
+      Compiles JS & CSS project assets in production mode
+      - Requires project to be checked out.
+      - Requires project gems to be installed.
+    steps:
+      - run:
+          name: Compile assets
+          command: RAILS_ENV=production bundle exec rails assets:precompile
+      - persist_to_workspace:
+          root: ~/app
+          paths:
+            - ./assets/builds
+
+  run-bundlewatch:
+    description: |
+      Checks assets sizes comply with bundlewatch size limits.
+      - Requires project to be checked out.
+      - Requires project npm packages to be installed.
+    steps:
+      - run:
+          name: Generate bundlewatch report
+          command: bundlewatch --config .bundlewatch.config.js
+
   ruby-linter:
     description: |
       Run rubocop linter.
@@ -144,14 +182,29 @@ commands:
           command: bundle exec rubocop
 
 jobs:
+  checkout-repo:
+    working_directory: ~/app
+    executor: ruby
+    steps:
+      - checkout-repo
+
+  install-dependencies:
+    working_directory: ~/app
+    executor: ruby
+    steps:
+      - attach_workspace:
+          at: .
+      - install-npm-packages
+      - install-bundler
+      - install-ruby-gems
+
   run-tests:
     working_directory: ~/app
     executor: ruby-on-rails
     steps:
-      - checkout
-      - install-npm-packages
+      - attach_workspace:
+          at: .
       - install-bundler
-      - install-ruby-gems
       - configure-database
       - run-tests
 
@@ -159,18 +212,36 @@ jobs:
     working_directory: ~/app
     executor: ruby
     steps:
-      - checkout
-      - install-bundler
       - attach_workspace:
           at: .
+      - install-bundler
       - ruby-linter
+
+  bundlewatch-monitor:
+    working_directory: ~/app
+    executor: ruby
+    steps:
+      - attach_workspace:
+          at: .
+      - install-bundler
+      - compile-assets
+      - run-bundlewatch
 
 # Definition of workflows
 workflows:
   # Run application test suite
   run_tests:
     jobs:
-      - run-tests
+      - checkout-repo
+      - install-dependencies:
+          requires:
+            - checkout-repo
+      - run-tests:
+          requires:
+            - install-dependencies
       - ruby-linter:
           requires:
-            - run-tests
+            - install-dependencies
+      - bundlewatch-monitor:
+          requires:
+            - install-dependencies
