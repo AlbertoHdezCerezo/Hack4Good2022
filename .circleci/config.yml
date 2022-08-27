@@ -158,7 +158,7 @@ commands:
       - persist_to_workspace:
           root: ~/app
           paths:
-            - ./assets/builds
+            - ./public/assets
 
   run-bundlewatch:
     description: |
@@ -166,9 +166,6 @@ commands:
       - Requires project to be checked out.
       - Requires project npm packages to be installed.
     steps:
-      - run:
-          name: Generate bundlewatch report
-          command: ls
       - run:
           name: Generate bundlewatch report
           command: bundlewatch --config .bundlewatch.config.js
