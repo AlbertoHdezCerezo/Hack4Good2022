@@ -104,7 +104,7 @@ commands:
             - vendor/bundle
           key: gem-cache-v4-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
       - persist_to_workspace:
-          root: workspace
+          root: ~/app
           paths:
             - vendor/bundle
 
