@@ -103,6 +103,10 @@ commands:
           paths:
             - vendor/bundle
           key: gem-cache-v4-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+      - persist_to_workspace:
+          root: workspace
+          paths:
+            - vendor/bundle
 
   configure-database:
     description: |
@@ -157,7 +161,7 @@ jobs:
     steps:
       - checkout
       - install-bundler
-      - install-ruby-gems
+      - attach_workspace
       - ruby-linter
 
 # Definition of workflows
