@@ -2,26 +2,6 @@ version: 2.1
 
 # Definition of environments where jobs will be executed
 executors:
-  # Ruby environment for installing gems and NPM packages
-  bundler:
-    # Jobs will be run in a docker container
-    docker:
-      # Ruby + Node + Selenium environment (ideal for testing)
-      - image: cimg/ruby:3.1.2-node
-        # Reference: https://circleci.com/docs/language-ruby
-        environment:
-          PARALLEL_WORKERS: "1"
-          # Bundler Configuration
-          # ---------------------
-          BUNDLE_JOBS: 3
-          BUNDLE_RETRY: 3
-          BUNDLE_PATH: vendor/bundle
-          # Disable changes in Gemfile
-          BUNDLE_FROZEN: true
-          # Rails environment Configuration
-          # -------------------------------
-          RAILS_ENV: test
-
   # Ruby environment
   ruby-on-rails:
     # Jobs will be run in a docker container
@@ -55,6 +35,9 @@ executors:
 
 commands:
   install-npm-packages:
+    description: |
+      Install NPM packages (or restore from cache) and update NPM cache if needed.
+      - Requires project to be checked out
     steps:
       - restore_cache:
           name: Restore npm packages cache
@@ -72,19 +55,21 @@ commands:
             - ~/.cache/yarn
           key: yarn-cache-v4-{{ .Branch }}-{{ checksum "yarn.lock" }}
 
-jobs:
-  install-npm-packages:
-    working_directory: ~/app
-    executor: bundler
+  install-bundler:
     steps:
-      - checkout
-      - install-npm-packages
+      - run:
+          name: Install bundler gem. Configure environment for loading gems in cache path
+          command: |
+            gem install bundler -v 2.3.20
+            bundle config set --local deployment 'true'
+            bundle config set --local path 'vendor/bundle'
 
   install-ruby-gems:
-    working_directory: ~/app
-    executor: bundler
+    description: |
+      Install project gems (or restore from cache) and update Gem cache if needed.
+      - Requires project to be checked out.
+      - Requires bundle to be installed.
     steps:
-      - checkout
       - restore_cache:
           name: Restore gems cache
           keys:
@@ -93,11 +78,7 @@ jobs:
             - gem-cache-v4-
       - run:
           name: Install gems if not cached
-          command: |
-            gem install bundler -v 2.3.20
-            bundle config set --local deployment 'true'
-            bundle config set --local path 'vendor/bundle'
-            bundle check || bundle install --jobs=6 --retry=3
+          command: bundle check || bundle install --jobs=6 --retry=3
       - save_cache:
           name: Save installed gems in cache
           paths:
@@ -105,10 +86,11 @@ jobs:
           key: gem-cache-v4-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
 
   configure-database:
-    working_directory: ~/app
-    executor: ruby-on-rails
+    description: |
+      Load database schema and prepares it with test data for running test suite.
+      - Requires project to be checked out.
+      - Requires project gems to be installed.
     steps:
-      - checkout
       - run:
           name: Set up DB
           command: bundle exec rails db:drop db:create db:structure:load --trace
@@ -117,25 +99,31 @@ jobs:
           command: bundle exec rails db:test:prepare
 
   run-tests:
+    description: |
+      Load database schema and prepares it with test data for running test suite.
+      - Requires project to be checked out.
+      - Requires project gems to be installed.
+      - Requires database to be prepared with tests data.
+    steps:
+      - run:
+          name: Run all tests
+          command: bundle exec rails test:all
+
+jobs:
+  run-tests:
     working_directory: ~/app
     executor: ruby-on-rails
     steps:
       - checkout
-      - run:
-          name: Run all tests
-          command: bundle exec rails test:all
+      - install-npm-packages
+      - install-bundler
+      - install-ruby-gems
+      - configure-database
+      - run-tests
 
 # Definition of workflows
 workflows:
   # Run application test suite
   run_tests:
     jobs:
-      - install-ruby-gems
-      - install-npm-packages
-      - configure-database:
-          requires:
-            - install-ruby-gems
-            - install-npm-packages
-      - run-tests:
-          requires:
-            - configure-database
+      - run-tests

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Optimize bundler installation with a new bundler executor">
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Refactor job steps into components">
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +213,7 @@
       <workItem from="1661020949297" duration="1420000" />
       <workItem from="1661075862881" duration="5344000" />
       <workItem from="1661192998791" duration="3594000" />
-      <workItem from="1661583735877" duration="1658000" />
+      <workItem from="1661583735877" duration="2465000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1660494713128</created>
@@ -361,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661585698442</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Refactor job steps into components">
+      <created>1661586051499</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1661586051499</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,6 +400,7 @@
     <MESSAGE value="Add test workflow" />
     <MESSAGE value="Fix rails bundler install" />
     <MESSAGE value="Optimize bundler installation with a new bundler executor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Optimize bundler installation with a new bundler executor" />
+    <MESSAGE value="Refactor job steps into components" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor job steps into components" />
   </component>
 </project>
