@@ -103,6 +103,7 @@ jobs:
     working_directory: ~/app
     executor: ruby-on-rails
     steps:
+      - checkout
       - run:
           name: Set up DB
           command: bundle exec rails db:drop db:create db:structure:load --trace
@@ -114,6 +115,7 @@ jobs:
     working_directory: ~/app
     executor: ruby-on-rails
     steps:
+      - checkout
       - run:
           name: Run all tests
           command: bundle exec rails test:all
