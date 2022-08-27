@@ -90,7 +90,6 @@ jobs:
           name: Install gems if not cached
           command: |
             gem install bundler -v 2.3.20
-            bundle lock --add-platform x86_64-linux
             bundle config set --local deployment 'true'
             bundle config set --local path 'vendor/bundle'
             bundle check || bundle install --jobs=6 --retry=3
