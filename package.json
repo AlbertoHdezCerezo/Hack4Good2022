@@ -10,11 +10,12 @@
     "tailwindcss": "^3.1.8"
   },
   "scripts": {
-    "build": "yarn build:esbuild && yarn build:tailwind",
     "build:esbuild": "node esbuild.config.mjs",
-    "build:tailwind": "yarn build:tailwind-config-viewer && npx tailwindcss --postcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css -c ./config/tailwind.config.js --minify",
-    "build:css": "yarn build:tailwind",
+    "build:tailwind": "npx tailwindcss --postcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css -c ./config/tailwind.config.js --minify",
     "build:tailwind-config-viewer": "tailwind-config-viewer export ./public/tailwind-config-viewer -c ./config/tailwind.config.js"
+    "build": "yarn build:esbuild",
+    "build:css": "yarn build:tailwind",
+    "build:dev": "yarn build:tailwind-config-viewer && yarn build:tailwind && yarn build:esbuild",
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
