@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Fix CI pipeline">
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Add test workflow">
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -213,7 +212,7 @@
       <workItem from="1661020949297" duration="1420000" />
       <workItem from="1661075862881" duration="5344000" />
       <workItem from="1661192998791" duration="3594000" />
-      <workItem from="1661583735877" duration="323000" />
+      <workItem from="1661583735877" duration="581000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1660494713128</created>
@@ -299,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661364934959</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add test workflow">
+      <created>1661584191150</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1661584191150</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,6 +333,7 @@
     <MESSAGE value="Add Circle CI initial config" />
     <MESSAGE value="Add npm/gem caching and db setup jobs to CI pipeline" />
     <MESSAGE value="Fix CI pipeline" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix CI pipeline" />
+    <MESSAGE value="Add test workflow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add test workflow" />
   </component>
 </project>
