@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Add test workflow">
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Fix rails bundler install">
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +212,7 @@
       <workItem from="1661020949297" duration="1420000" />
       <workItem from="1661075862881" duration="5344000" />
       <workItem from="1661192998791" duration="3594000" />
-      <workItem from="1661583735877" duration="581000" />
+      <workItem from="1661583735877" duration="796000" />
     </task>
     <task id="LOCAL-00001" summary="First commit">
       <created>1660494713128</created>
@@ -305,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661584191150</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Fix rails bundler install">
+      <created>1661584646991</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1661584646991</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,6 +341,7 @@
     <MESSAGE value="Add npm/gem caching and db setup jobs to CI pipeline" />
     <MESSAGE value="Fix CI pipeline" />
     <MESSAGE value="Add test workflow" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add test workflow" />
+    <MESSAGE value="Fix rails bundler install" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix rails bundler install" />
   </component>
 </project>
