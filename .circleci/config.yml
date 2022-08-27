@@ -161,7 +161,8 @@ jobs:
     steps:
       - checkout
       - install-bundler
-      - attach_workspace
+      - attach_workspace:
+          at: .
       - ruby-linter
 
 # Definition of workflows
