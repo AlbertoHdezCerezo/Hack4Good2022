@@ -129,6 +129,12 @@ jobs:
       - configure-database
       - run-tests
 
+  ruby-linter:
+    working_directory: ~/app
+    executor: ruby-on-rails
+    steps:
+      - ruby-linter
+
 # Definition of workflows
 workflows:
   # Run application test suite
