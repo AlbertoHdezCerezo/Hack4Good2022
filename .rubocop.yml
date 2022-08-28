@@ -33,6 +33,7 @@ AllCops:
     - 'db/migrate/*.rb'
     - 'config/environments/*.rb'
     - 'Rakefile'
+    - 'Gemfile'
 
 # Rubocop plugin gems to be used with linter
 require:
