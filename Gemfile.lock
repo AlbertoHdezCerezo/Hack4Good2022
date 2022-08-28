@@ -205,7 +205,7 @@ GEM
       io-console (~> 0.5)
     rexml (3.2.5)
     rouge (3.30.0)
-    rubocop (1.35.0)
+    rubocop (1.35.1)
       json (~> 2.3)
       parallel (~> 1.10)
       parser (>= 3.1.2.1)
