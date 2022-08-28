@@ -49,7 +49,7 @@ executors:
       - image: cimg/postgres:13.4
         environment:
           POSTGRES_USER: albert-ci
-          POSTGRES_DB: Albert_Template_test
+          POSTGRES_DB: Albert_test
           POSTGRES_PASSWORD: ""
 
 commands:
