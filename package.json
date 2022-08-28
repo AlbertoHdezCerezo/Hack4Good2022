@@ -23,7 +23,7 @@
     "@babel/preset-env": "^7.18.10",
     "bundlewatch": "^0.3.3",
     "esbuild-plugin-babel": "^0.2.3",
-    "eslint": "^8.21.0",
+    "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
