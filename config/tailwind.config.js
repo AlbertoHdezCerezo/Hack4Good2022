@@ -11,8 +11,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      primary: ['nitti, monospace', ...defaultTheme.fontFamily.sans],
-      secondary: ['bilo, sans-serif']
+      primary: ['Inter', ...defaultTheme.fontFamily.sans]
     }
   },
   variants: {},
