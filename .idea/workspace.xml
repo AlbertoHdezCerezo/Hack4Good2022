@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.browserslistrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.bundlewatch.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/babel.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/esbuild.config.mjs" afterDir="false" />
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Fix linter issues">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +19,32 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="enhancement/configure-view-components" />
+                    <option name="lastUsedInstant" value="1661084446" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1660495137" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -34,23 +57,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/eslint",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/prettier",
-    "ruby.rails.projectView.checked": "true",
-    "settings.editor.selected.configurable": "settings.javascript.prettier"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/test/components/previews/common&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/eslint&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/prettier&quot;,
+    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/RubyMine.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/components/previews/common" />
+      <recent name="$PROJECT_DIR$/app/components" />
+      <recent name="$PROJECT_DIR$/app/assets/stylesheets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/system/components" />
+      <recent name="$PROJECT_DIR$/test/components/previews" />
+      <recent name="$PROJECT_DIR$/config" />
+      <recent name="$PROJECT_DIR$/app/javascript/css" />
+    </key>
+  </component>
   <component name="RunManager" selected="Rails.Development: Albert-Template">
     <configuration name="Development: Albert-Template" type="RailsRunConfigurationType" factoryName="Rails">
       <module name="Albert-Template" />
@@ -168,8 +205,345 @@
       <workItem from="1660419703729" duration="627000" />
       <workItem from="1660464133730" duration="142000" />
       <workItem from="1660464290506" duration="191000" />
-      <workItem from="1660464497904" duration="4783000" />
+      <workItem from="1660464497904" duration="5442000" />
+      <workItem from="1660495472096" duration="420000" />
+      <workItem from="1660582697407" duration="128000" />
+      <workItem from="1660582841319" duration="1043000" />
+      <workItem from="1661020949297" duration="1420000" />
+      <workItem from="1661075862881" duration="5344000" />
+      <workItem from="1661192998791" duration="3594000" />
+      <workItem from="1661583735877" duration="10997000" />
     </task>
+    <task id="LOCAL-00001" summary="First commit">
+      <created>1660494713128</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1660494713128</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add ViewComponent &amp; Lookbook gems">
+      <created>1660583122150</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1660583122150</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added configuration for TailwindCSS">
+      <created>1661080322717</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1661080322717</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added configuration for TailwindCSS">
+      <created>1661080328093</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661080328093</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fix TailwindCSS content configuration">
+      <created>1661080785485</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1661080785485</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fix sample component test">
+      <created>1661084630833</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1661084630833</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add tailwind configuration preview">
+      <created>1661103428352</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1661103428352</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add font configuration to TailwindCSS">
+      <created>1661105334065</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1661105334065</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add Circle CI initial config">
+      <created>1661195727429</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1661195727429</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add Circle CI initial config">
+      <created>1661196058323</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1661196058323</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add npm/gem caching and db setup jobs to CI pipeline">
+      <created>1661364859445</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1661364859446</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fix CI pipeline">
+      <created>1661364934959</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1661364934959</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add test workflow">
+      <created>1661584191150</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1661584191150</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fix rails bundler install">
+      <created>1661584646991</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1661584646991</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Optimize bundler installation with a new bundler executor">
+      <created>1661584875335</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1661584875335</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Optimize bundler installation with a new bundler executor">
+      <created>1661584913573</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1661584913573</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Optimize bundler installation with a new bundler executor">
+      <created>1661585248471</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1661585248471</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Optimize bundler installation with a new bundler executor">
+      <created>1661585367334</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1661585367334</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Optimize bundler installation with a new bundler executor">
+      <created>1661585492234</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1661585492234</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Optimize bundler installation with a new bundler executor">
+      <created>1661585613906</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1661585613906</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Optimize bundler installation with a new bundler executor">
+      <created>1661585698442</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1661585698442</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Refactor job steps into components">
+      <created>1661586051499</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1661586051499</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Refactor job steps into commands">
+      <created>1661586803078</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1661586803078</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Refactor job steps into commands">
+      <created>1661586859677</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1661586859677</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Refactor job steps into commands">
+      <created>1661587125891</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1661587125891</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Refactor job steps into commands">
+      <created>1661587346555</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1661587346555</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Refactor job steps into commands">
+      <created>1661587394317</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1661587394317</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Add linter job to CI">
+      <created>1661587610146</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1661587610146</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Add linter job to CI">
+      <created>1661587670897</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1661587670897</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Add linter job to CI">
+      <created>1661587784484</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1661587784484</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Add linter job to CI">
+      <created>1661587941400</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1661587941400</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Add linter job to CI">
+      <created>1661588111759</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1661588111759</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Add linter job to CI">
+      <created>1661588471537</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1661588471537</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Add linter job to CI">
+      <created>1661588570085</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1661588570085</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Add linter job to CI">
+      <created>1661588653260</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1661588653260</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Add dependabot">
+      <created>1661589109027</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1661589109027</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Add dependabot">
+      <created>1661619140220</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1661619140220</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Add bundlewatch CI job">
+      <created>1661620253010</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1661620253010</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Add bundlewatch CI job">
+      <created>1661621059950</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1661621059950</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Update bundlewatch config">
+      <created>1661621578227</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1661621578227</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Update bundlewatch config">
+      <created>1661621998826</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1661621998826</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Update bundlewatch config">
+      <created>1661622161424</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1661622161424</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Update bundlewatch config">
+      <created>1661622442699</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1661622442699</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Update bundlewatch config">
+      <created>1661673488990</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1661673488990</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Update bundlewatch config">
+      <created>1661673633358</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1661673633358</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Update bundlewatch config">
+      <created>1661674001887</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1661674001887</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Fix linter issues">
+      <created>1661675209551</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1661675209551</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,5 +559,28 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit" />
+    <MESSAGE value="Add ViewComponent &amp; Lookbook gems" />
+    <MESSAGE value="Added configuration for TailwindCSS" />
+    <MESSAGE value="Fix TailwindCSS content configuration" />
+    <MESSAGE value="Fix sample component test" />
+    <MESSAGE value="Add tailwind configuration preview" />
+    <MESSAGE value="Add font configuration to TailwindCSS" />
+    <MESSAGE value="Add Circle CI initial config" />
+    <MESSAGE value="Add npm/gem caching and db setup jobs to CI pipeline" />
+    <MESSAGE value="Fix CI pipeline" />
+    <MESSAGE value="Add test workflow" />
+    <MESSAGE value="Fix rails bundler install" />
+    <MESSAGE value="Optimize bundler installation with a new bundler executor" />
+    <MESSAGE value="Refactor job steps into components" />
+    <MESSAGE value="Refactor job steps into commands" />
+    <MESSAGE value="Add linter job to CI" />
+    <MESSAGE value="Add dependabot" />
+    <MESSAGE value="Add bundlewatch CI job" />
+    <MESSAGE value="Update bundlewatch config" />
+    <MESSAGE value="Fix linter issues" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix linter issues" />
   </component>
 </project>

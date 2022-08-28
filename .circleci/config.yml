@@ -1,0 +1,247 @@
+version: 2.1
+
+# Definition of environments where jobs will be executed
+executors:
+  ruby:
+    # Jobs will be run in a docker container
+    docker:
+      # Ruby + Node + Selenium environment (ideal for testing)
+      - image: cimg/ruby:3.1.2-browsers
+        # Reference: https://circleci.com/docs/language-ruby
+        environment:
+          PARALLEL_WORKERS: "1"
+          # Bundler Configuration
+          # ---------------------
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+          # Disable changes in Gemfile
+          BUNDLE_FROZEN: true
+          # Rails environment Configuration
+          # -------------------------------
+          RAILS_ENV: test
+
+  # Ruby environment
+  ruby-on-rails:
+    # Jobs will be run in a docker container
+    docker:
+      # Ruby + Node + Selenium environment (ideal for testing)
+      - image: cimg/ruby:3.1.2-browsers
+        # Reference: https://circleci.com/docs/language-ruby
+        environment:
+          PARALLEL_WORKERS: "1"
+          # Bundler Configuration
+          # ---------------------
+          BUNDLE_JOBS: 3
+          BUNDLE_RETRY: 3
+          BUNDLE_PATH: vendor/bundle
+          # Disable changes in Gemfile
+          BUNDLE_FROZEN: true
+          # Database Configuration
+          # ----------------------
+          PGHOST: 127.0.0.1
+          PGUSER: albert-ci
+          PGPASSWORD: ""
+          # Rails environment Configuration
+          # -------------------------------
+          RAILS_ENV: test
+
+      - image: cimg/postgres:13.4
+        environment:
+          POSTGRES_USER: albert-ci
+          POSTGRES_DB: Albert_Template_test
+          POSTGRES_PASSWORD: ""
+
+commands:
+  checkout-repo:
+    description: |
+      Pull repository and add it to workspace.
+    steps:
+      - checkout
+      - persist_to_workspace:
+          root: ~/app
+          paths:
+            - .
+
+  install-npm-packages:
+    description: |
+      Install NPM packages (or restore from cache) and update NPM cache if needed.
+      - Requires project to be checked out
+    steps:
+      - restore_cache:
+          name: Restore npm packages cache
+          keys:
+            - yarn-cache-v4-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - yarn-cache-v4-{{ .Branch }}
+            - yarn-cache-v4-
+      - run:
+          name: Install npm packages if not cached
+          command: yarn install --immutable
+      - save_cache:
+          name: Save installed npm packages in cache
+          key: yarn-cache-v4-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - .yarn/cache
+            - .yarn/unplugged
+      - persist_to_workspace:
+          root: ~/app
+          paths:
+           - ./node_modules
+
+  install-bundler:
+    steps:
+      - run:
+          name: Install bundler gem. Configure environment for loading gems in cache path
+          command: |
+            gem install bundler -v 2.3.20
+            bundle config set --local deployment 'true'
+            bundle config set --local path 'vendor/bundle'
+
+  install-ruby-gems:
+    description: |
+      Install project gems (or restore from cache) and update Gem cache if needed.
+      - Requires project to be checked out.
+      - Requires bundle to be installed.
+    steps:
+      - restore_cache:
+          name: Restore gems cache
+          keys:
+            - gem-cache-v4-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - gem-cache-v4-{{ .Branch }}
+            - gem-cache-v4-
+      - run:
+          name: Install gems if not cached
+          command: bundle check || bundle install --jobs=6 --retry=3
+      - save_cache:
+          name: Save installed gems in cache
+          paths:
+            - vendor/bundle
+          key: gem-cache-v4-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+      - persist_to_workspace:
+          root: ~/app
+          paths:
+            - vendor/bundle
+
+  configure-database:
+    description: |
+      Load database schema and prepares it with test data for running test suite.
+      - Requires project to be checked out.
+      - Requires project gems to be installed.
+    steps:
+      - run:
+          name: Set up DB
+          command: bundle exec rails db:drop db:create db:migrate --trace
+      - run:
+          name: Load DB fixtures
+          command: bundle exec rails db:test:prepare
+
+  run-tests:
+    description: |
+      Load database schema and prepares it with test data for running test suite.
+      - Requires project to be checked out.
+      - Requires project gems to be installed.
+      - Requires database to be prepared with tests data.
+    steps:
+      - run:
+          name: Run all tests
+          command: bundle exec rails test:all
+
+  compile-assets:
+    description: |
+      Compiles JS & CSS project assets in production mode
+      - Requires project to be checked out.
+      - Requires project gems to be installed.
+    steps:
+      - run:
+          name: Compile assets
+          command: RAILS_ENV=production bundle exec rails assets:precompile
+      - persist_to_workspace:
+          root: ~/app
+          paths:
+            - ./public/assets
+
+  run-bundlewatch:
+    description: |
+      Checks assets sizes comply with bundlewatch size limits.
+      - Requires project to be checked out.
+      - Requires project npm packages to be installed.
+    steps:
+      - run:
+          name: Generate bundlewatch report
+          command: yarn run bundlewatch --config .bundlewatch.config.js
+
+  ruby-linter:
+    description: |
+      Run rubocop linter.
+    steps:
+      - run:
+          name: Install rubocop
+          command: gem install rubocop
+      - run:
+          name: Run rubocop linter
+          command: bundle exec rubocop
+
+jobs:
+  checkout-repo:
+    working_directory: ~/app
+    executor: ruby
+    steps:
+      - checkout-repo
+
+  install-dependencies:
+    working_directory: ~/app
+    executor: ruby
+    steps:
+      - attach_workspace:
+          at: .
+      - install-npm-packages
+      - install-bundler
+      - install-ruby-gems
+
+  run-tests:
+    working_directory: ~/app
+    executor: ruby-on-rails
+    steps:
+      - attach_workspace:
+          at: .
+      - install-bundler
+      - configure-database
+      - run-tests
+
+  ruby-linter:
+    working_directory: ~/app
+    executor: ruby
+    steps:
+      - attach_workspace:
+          at: .
+      - install-bundler
+      - ruby-linter
+
+  bundlewatch-monitor:
+    working_directory: ~/app
+    executor: ruby
+    steps:
+      - attach_workspace:
+          at: .
+      - install-bundler
+      - compile-assets
+      - run-bundlewatch
+
+# Definition of workflows
+workflows:
+  # Run application test suite
+  run_tests:
+    jobs:
+      - checkout-repo
+      - install-dependencies:
+          requires:
+            - checkout-repo
+      - run-tests:
+          requires:
+            - install-dependencies
+      - ruby-linter:
+          requires:
+            - install-dependencies
+      - bundlewatch-monitor:
+          requires:
+            - install-dependencies

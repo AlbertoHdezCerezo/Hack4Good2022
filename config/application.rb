@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative "boot"
 
 require "rails/all"
@@ -9,7 +11,12 @@ Bundler.require(*Rails.groups)
 module AlbertTemplate
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 7.0
+    config.load_defaults(7.0)
+
+    # ViewComponent Configuration
+    # ===========================
+    # Set up preview layout
+    config.view_component.default_preview_layout = "preview_layout"
 
     # Configuration for the application, engines, and railties goes here.
     #
