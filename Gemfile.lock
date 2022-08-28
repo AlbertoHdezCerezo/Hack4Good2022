@@ -199,7 +199,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redcarpet (3.5.1)
-    redis (4.7.1)
+    redis (4.8.0)
     regexp_parser (2.5.0)
     reline (0.3.1)
       io-console (~> 0.5)
@@ -295,7 +295,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
-  redis (~> 4.0)
+  redis (~> 4.8)
   rubocop (~> 1.35)
   rubocop-performance
   rubocop-rails
