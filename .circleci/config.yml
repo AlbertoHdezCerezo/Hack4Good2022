@@ -168,10 +168,7 @@ commands:
     steps:
       - run:
           name: Generate bundlewatch report
-          command: yarn install
-      - run:
-          name: Generate bundlewatch report
-          command: bundlewatch --config .bundlewatch.config.js
+          command: yarn run bundlewatch --config .bundlewatch.config.js
 
   ruby-linter:
     description: |
