@@ -76,17 +76,17 @@ commands:
             - yarn-cache-v4-
       - run:
           name: Install npm packages if not cached
-          command: |
-            yarn install --ignore-engines --frozen-lockfile
+          command: yarn install --immutable
       - save_cache:
           name: Save installed npm packages in cache
-          paths:
-            - ~/.cache/yarn
           key: yarn-cache-v4-{{ .Branch }}-{{ checksum "yarn.lock" }}
-      - persist_to_workspace:
-          root: ~/.cache/yarn
           paths:
-           - .
+            - .yarn/cache
+            - .yarn/unplugged
+      - persist_to_workspace:
+          root: ~/app
+          paths:
+           - ./node_modules
 
   install-bundler:
     steps:
