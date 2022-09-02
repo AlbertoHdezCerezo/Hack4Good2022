@@ -74,7 +74,7 @@ group :development, :test do
 
   ## Linter Gems
   # Rubocop Linter
-  gem "rubocop", "~> 1.35", require: false
+  gem "rubocop", "~> 1.36", require: false
   # Rubocop extension for enforcing of Rails best practices
   gem "rubocop-rails", require: false
   # Performance analysis optimization
