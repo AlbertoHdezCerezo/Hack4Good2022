@@ -301,6 +301,14 @@ jobs:
           name: Run Bundle Monitors
           command: bin/ci-bundler
 
+  ci-pipeline-tests:
+    working_directory: ~/app
+    executor: ruby-on-rails
+    steps:
+      - checkout
+      - restore-npm-cache
+      - restore-gems-cache
+
 # Definition of workflows
 workflows:
   # Run application test suite

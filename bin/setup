@@ -28,7 +28,7 @@ FileUtils.chdir APP_ROOT do
     # Set gem installation path
     system("bundle config set --local path '#{GEM_PATH}'")
     # Install gems
-    system("bundle check || bundle install --jobs=6 --retry=3")
+    system("bundle check || bundle install --with=test --jobs=6 --retry=3")
   else
     system("bundle check") || system!("bundle install --clean --redownload")
   end

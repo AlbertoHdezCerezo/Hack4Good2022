@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Add scripts for CI &amp; run CI pipeline with scripts" />
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Change CI script permissions">
+      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/setup" beforeDir="false" afterPath="$PROJECT_DIR$/bin/setup" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -214,14 +217,7 @@
       <workItem from="1661192998791" duration="3594000" />
       <workItem from="1661583735877" duration="10997000" />
       <workItem from="1661705785316" duration="1908000" />
-      <workItem from="1661795782267" duration="4565000" />
-    </task>
-    <task id="LOCAL-00002" summary="Add ViewComponent &amp; Lookbook gems">
-      <created>1660583122150</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1660583122150</updated>
+      <workItem from="1661795782267" duration="4887000" />
     </task>
     <task id="LOCAL-00003" summary="Added configuration for TailwindCSS">
       <created>1661080322717</created>
@@ -559,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662283252000</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Change CI script permissions">
+      <created>1662283590286</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1662283590286</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,6 +602,7 @@
     <MESSAGE value="Fix linter issues" />
     <MESSAGE value="Replace template project name" />
     <MESSAGE value="Add scripts for CI &amp; run CI pipeline with scripts" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add scripts for CI &amp; run CI pipeline with scripts" />
+    <MESSAGE value="Change CI script permissions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change CI script permissions" />
   </component>
 </project>
