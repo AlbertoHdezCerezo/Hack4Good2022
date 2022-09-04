@@ -53,19 +53,9 @@ executors:
           POSTGRES_PASSWORD: ""
 
 commands:
-  checkout-repo:
+  restore-npm-cache:
     description: |
-      Pull repository and add it to workspace.
-    steps:
-      - checkout
-      - persist_to_workspace:
-          root: ~/app
-          paths:
-            - .
-
-  install-npm-packages:
-    description: |
-      Install NPM packages (or restore from cache) and update NPM cache if needed.
+      Restore NPM packages from cache, so the setup script can make use of them.
       - Requires project to be checked out
     steps:
       - restore_cache:
@@ -74,32 +64,22 @@ commands:
             - yarn-cache-v4-{{ .Branch }}-{{ checksum "yarn.lock" }}
             - yarn-cache-v4-{{ .Branch }}
             - yarn-cache-v4-
-      - run:
-          name: Install npm packages if not cached
-          command: yarn install --immutable
+
+  refresh-npm-cache:
+    description: |
+      Update NPM cache with latest installed packages.
+      - Requires project to be checked out
+    steps:
       - save_cache:
           name: Save installed npm packages in cache
           key: yarn-cache-v4-{{ .Branch }}-{{ checksum "yarn.lock" }}
           paths:
             - .yarn/cache
             - .yarn/unplugged
-      - persist_to_workspace:
-          root: ~/app
-          paths:
-           - ./node_modules
 
-  install-bundler:
-    steps:
-      - run:
-          name: Install bundler gem. Configure environment for loading gems in cache path
-          command: |
-            gem install bundler -v 2.3.20
-            bundle config set --local deployment 'true'
-            bundle config set --local path 'vendor/bundle'
-
-  install-ruby-gems:
+  restore-gems-cache:
     description: |
-      Install project gems (or restore from cache) and update Gem cache if needed.
+      Restore Ruby gems from cache, so the setup script can make use of them.
       - Requires project to be checked out.
       - Requires bundle to be installed.
     steps:
@@ -109,42 +89,18 @@ commands:
             - gem-cache-v4-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
             - gem-cache-v4-{{ .Branch }}
             - gem-cache-v4-
-      - run:
-          name: Install gems if not cached
-          command: bundle check || bundle install --jobs=6 --retry=3
+
+  refresh-gems-cache:
+    description: |
+      Update Ruby gems cache with latest installed gems.
+      - Requires project to be checked out.
+      - Requires bundle to be installed.
+    steps:
       - save_cache:
           name: Save installed gems in cache
           paths:
             - vendor/bundle
           key: gem-cache-v4-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
-      - persist_to_workspace:
-          root: ~/app
-          paths:
-            - vendor/bundle
-
-  configure-database:
-    description: |
-      Load database schema and prepares it with test data for running test suite.
-      - Requires project to be checked out.
-      - Requires project gems to be installed.
-    steps:
-      - run:
-          name: Set up DB
-          command: bundle exec rails db:drop db:create db:migrate --trace
-      - run:
-          name: Load DB fixtures
-          command: bundle exec rails db:test:prepare
-
-  run-tests:
-    description: |
-      Load database schema and prepares it with test data for running test suite.
-      - Requires project to be checked out.
-      - Requires project gems to be installed.
-      - Requires database to be prepared with tests data.
-    steps:
-      - run:
-          name: Run all tests
-          command: bundle exec rails test:all
 
   compile-assets:
     description: |
@@ -160,88 +116,67 @@ commands:
           paths:
             - ./public/assets
 
-  run-bundlewatch:
-    description: |
-      Checks assets sizes comply with bundlewatch size limits.
-      - Requires project to be checked out.
-      - Requires project npm packages to be installed.
-    steps:
-      - run:
-          name: Generate bundlewatch report
-          command: yarn run bundlewatch --config .bundlewatch.config.js
-
-  ruby-linter:
-    description: |
-      Run rubocop linter.
-    steps:
-      - run:
-          name: Install rubocop
-          command: gem install rubocop
-      - run:
-          name: Run rubocop linter
-          command: bundle exec rubocop
-
 jobs:
-  checkout-repo:
-    working_directory: ~/app
-    executor: ruby
-    steps:
-      - checkout-repo
-
-  install-dependencies:
-    working_directory: ~/app
-    executor: ruby
-    steps:
-      - attach_workspace:
-          at: .
-      - install-npm-packages
-      - install-bundler
-      - install-ruby-gems
-
-  run-tests:
+  ci-pipeline-tests:
     working_directory: ~/app
     executor: ruby-on-rails
     steps:
-      - attach_workspace:
-          at: .
-      - install-bundler
-      - configure-database
-      - run-tests
+      - checkout
+      - restore-npm-cache
+      - restore-gems-cache
+      - run:
+          name: Run Set-Up Script
+          command: bin/setup
+      - refresh-gems-cache
+      - refresh-gems-cache
+      - run:
+          name: Run Test Suite
+          command: bin/ci-tests
 
-  ruby-linter:
+  ci-pipeline-linter:
     working_directory: ~/app
     executor: ruby
     steps:
-      - attach_workspace:
-          at: .
-      - install-bundler
-      - ruby-linter
+      - checkout
+      - restore-gems-cache
+      - run:
+          name: Run Linters
+          command: bin/ci-linter
 
-  bundlewatch-monitor:
+  ci-pipeline-audits:
     working_directory: ~/app
     executor: ruby
     steps:
-      - attach_workspace:
-          at: .
-      - install-bundler
+      - checkout
+      - restore-gems-cache
+      - run:
+          name: Run Audits
+          command: bin/ci-audits
+
+  ci-pipeline-bundler:
+    working_directory: ~/app
+    executor: ruby
+    steps:
+      - checkout
+      - restore-gems-cache
+      - restore-npm-cache
       - compile-assets
-      - run-bundlewatch
+      - run:
+          name: Run Bundle Monitors
+          command: bin/ci-bundler
 
 # Definition of workflows
 workflows:
-  # Run application test suite
+  # Run all application validations
   run_tests:
     jobs:
-      - checkout-repo
-      - install-dependencies:
+      - ci-pipeline-tests
+      - ci-pipeline-linter:
           requires:
-            - checkout-repo
-      - run-tests:
+            - ci-pipeline-tests
+      - ci-pipeline-bundler:
           requires:
-            - install-dependencies
-      - ruby-linter:
+            - ci-pipeline-tests
+      - ci-pipeline-audits:
           requires:
-            - install-dependencies
-      - bundlewatch-monitor:
-          requires:
-            - install-dependencies
+            - ci-pipeline-tests

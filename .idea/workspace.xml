@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Fix linter issues">
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Fix ci-pipeline">
+      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Albert-Template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Albert-Template.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +31,8 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="enhancement/configure-view-components" />
-                    <option name="lastUsedInstant" value="1661084446" />
+                    <option name="branchName" value="feature/configure-scripts" />
+                    <option name="lastUsedInstant" value="1662281358" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
@@ -57,26 +59,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/test/components/previews/common&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/eslint&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/prettier&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/RubyMine.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "/Users/alberto-mac/Desktop/Projects/Albert/Albert/bin",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/eslint",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/prettier",
+    "ruby.rails.projectView.checked": "true",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "Errors",
+    "ts.external.directory.path": "/Applications/RubyMine.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$/test/components/previews/common" />
       <recent name="$PROJECT_DIR$/app/components" />
       <recent name="$PROJECT_DIR$/app/assets/stylesheets" />
@@ -213,76 +217,8 @@
       <workItem from="1661075862881" duration="5344000" />
       <workItem from="1661192998791" duration="3594000" />
       <workItem from="1661583735877" duration="10997000" />
-    </task>
-    <task id="LOCAL-00001" summary="First commit">
-      <created>1660494713128</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1660494713128</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Add ViewComponent &amp; Lookbook gems">
-      <created>1660583122150</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1660583122150</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Added configuration for TailwindCSS">
-      <created>1661080322717</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1661080322717</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Added configuration for TailwindCSS">
-      <created>1661080328093</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1661080328093</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Fix TailwindCSS content configuration">
-      <created>1661080785485</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1661080785485</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Fix sample component test">
-      <created>1661084630833</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1661084630833</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Add tailwind configuration preview">
-      <created>1661103428352</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1661103428352</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Add font configuration to TailwindCSS">
-      <created>1661105334065</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1661105334065</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Add Circle CI initial config">
-      <created>1661195727429</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1661195727429</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Add Circle CI initial config">
-      <created>1661196058323</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1661196058323</updated>
+      <workItem from="1661705785316" duration="1908000" />
+      <workItem from="1661795782267" duration="7490000" />
     </task>
     <task id="LOCAL-00011" summary="Add npm/gem caching and db setup jobs to CI pipeline">
       <created>1661364859445</created>
@@ -543,7 +479,91 @@
       <option name="project" value="LOCAL" />
       <updated>1661675209551</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="Replace template project name">
+      <created>1661706005721</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1661706005721</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Replace template project name">
+      <created>1662281346067</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1662281346067</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Add scripts for CI &amp; run CI pipeline with scripts">
+      <created>1662283251999</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1662283252000</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Change CI script permissions">
+      <created>1662283590286</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1662283590286</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Fix ci-pipeline">
+      <created>1662283914072</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1662283914072</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Fix ci-pipeline">
+      <created>1662284106214</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1662284106214</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Fix ci-pipeline">
+      <created>1662284227339</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1662284227339</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Fix ci-pipeline">
+      <created>1662284371737</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1662284371737</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Fix ci-pipeline">
+      <created>1662284493660</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1662284493660</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Fix ci-pipeline">
+      <created>1662285085268</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1662285085269</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Fix ci-pipeline">
+      <created>1662285226367</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1662285226367</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Fix ci-pipeline">
+      <created>1662285641894</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1662285641894</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,6 +601,10 @@
     <MESSAGE value="Add bundlewatch CI job" />
     <MESSAGE value="Update bundlewatch config" />
     <MESSAGE value="Fix linter issues" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix linter issues" />
+    <MESSAGE value="Replace template project name" />
+    <MESSAGE value="Add scripts for CI &amp; run CI pipeline with scripts" />
+    <MESSAGE value="Change CI script permissions" />
+    <MESSAGE value="Fix ci-pipeline" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix ci-pipeline" />
   </component>
 </project>
