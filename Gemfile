@@ -82,6 +82,10 @@ group :development, :test do
   gem "rubocop-rails", require: false
   # Performance analysis optimization
   gem "rubocop-performance", require: false
+
+  # Test Tools
+  gem "factory_bot_rails"
+  gem "faker"
 end
 
 group :development do
