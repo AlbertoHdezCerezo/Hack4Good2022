@@ -16,5 +16,5 @@ FileUtils.chdir APP_ROOT do
 
   puts "\n ## Rubocop Linter"
   puts "\n -----------------"
-  system! "rubocop"
+  system! "bundle exec rubocop"
 end
