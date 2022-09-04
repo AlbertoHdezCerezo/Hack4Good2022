@@ -63,6 +63,30 @@ commands:
           paths:
             - .
 
+  restore-npm-cache:
+    description: |
+      Restore NPM packages from cache, so the setup script can make use of them.
+      - Requires project to be checked out
+    steps:
+      - restore_cache:
+          name: Restore npm packages cache
+          keys:
+            - yarn-cache-v4-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - yarn-cache-v4-{{ .Branch }}
+            - yarn-cache-v4-
+
+  refresh-npm-cache:
+    description: |
+      Update NPM cache with latest installed packages.
+      - Requires project to be checked out
+    steps:
+      - save_cache:
+          name: Save installed npm packages in cache
+          key: yarn-cache-v4-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - .yarn/cache
+            - .yarn/unplugged
+
   install-npm-packages:
     description: |
       Install NPM packages (or restore from cache) and update NPM cache if needed.
@@ -96,6 +120,31 @@ commands:
             gem install bundler -v 2.3.20
             bundle config set --local deployment 'true'
             bundle config set --local path 'vendor/bundle'
+
+  restore-gems-cache:
+    description: |
+      Restore Ruby gems from cache, so the setup script can make use of them.
+      - Requires project to be checked out.
+      - Requires bundle to be installed.
+    steps:
+      - restore_cache:
+          name: Restore gems cache
+          keys:
+            - gem-cache-v4-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
+            - gem-cache-v4-{{ .Branch }}
+            - gem-cache-v4-
+
+  refresh-gems-cache:
+    description: |
+      Update Ruby gems cache with latest installed gems.
+      - Requires project to be checked out.
+      - Requires bundle to be installed.
+    steps:
+      - save_cache:
+          name: Save installed gems in cache
+          paths:
+            - vendor/bundle
+          key: gem-cache-v4-{{ .Branch }}-{{ checksum "Gemfile.lock" }}
 
   install-ruby-gems:
     description: |
@@ -227,21 +276,34 @@ jobs:
       - compile-assets
       - run-bundlewatch
 
+  ci-pipeline:
+    working_directory: ~/app
+    executor: ruby-on-rails
+    steps:
+      - checkout
+      - restore-npm-cache
+      - restore-gems-cache
+      - run:
+          name: Run Set-Up Script
+          command: bin/setup
+      - refresh-gems-cache
+      - refresh-gems-cache
+      - run:
+          name: Run Test Suite
+          command: bin/ci-tests
+      - run:
+          name: Run Linters
+          command: bin/ci-linter
+      - run:
+          name: Run Audits
+          command: bin/ci-audits
+      - run:
+          name: Run Bundle Monitors
+          command: bin/ci-bundler
+
 # Definition of workflows
 workflows:
   # Run application test suite
   run_tests:
     jobs:
-      - checkout-repo
-      - install-dependencies:
-          requires:
-            - checkout-repo
-      - run-tests:
-          requires:
-            - install-dependencies
-      - ruby-linter:
-          requires:
-            - install-dependencies
-      - bundlewatch-monitor:
-          requires:
-            - install-dependencies
+      - ci-pipeline

@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+require "fileutils"
+
+# path to your application root.
+APP_ROOT = File.expand_path("..", __dir__)
+
+# SET-UP CONFIGURATION VARIABLES
+# ------------------------------
+GEM_PATH =
+
+def system!(*args)
+  system(*args) || abort("\n== Command #{args} failed ==")
+end
+
+# SET-UP SCRIPT
+# -------------
+FileUtils.chdir APP_ROOT do
+  puts "\n ## Running Security Audits"
+  puts "\n =========================="
+
+  puts "\n ### Brakeman Inspector"
+  puts "\n ----------------------"
+  system! "brakeman"
+
+  puts "\n ### Bundle Audit Inspector"
+  puts "\n --------------------------"
+  system! "gem install bundler-audit"
+  system! "bundle-audit check --update"
+end
