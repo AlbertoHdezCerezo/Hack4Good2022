@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Fix ci-pipeline">
-      <change beforePath="$PROJECT_DIR$/bin/ci-audits" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ci-audits" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,28 +217,7 @@
       <workItem from="1661192998791" duration="3594000" />
       <workItem from="1661583735877" duration="10997000" />
       <workItem from="1661705785316" duration="1908000" />
-      <workItem from="1661795782267" duration="5211000" />
-    </task>
-    <task id="LOCAL-00005" summary="Fix TailwindCSS content configuration">
-      <created>1661080785485</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1661080785485</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Fix sample component test">
-      <created>1661084630833</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1661084630833</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Add tailwind configuration preview">
-      <created>1661103428352</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1661103428352</updated>
+      <workItem from="1661795782267" duration="6038000" />
     </task>
     <task id="LOCAL-00008" summary="Add font configuration to TailwindCSS">
       <created>1661105334065</created>
@@ -561,7 +541,28 @@
       <option name="project" value="LOCAL" />
       <updated>1662284106214</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Fix ci-pipeline">
+      <created>1662284227339</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1662284227339</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Fix ci-pipeline">
+      <created>1662284371737</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1662284371737</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Fix ci-pipeline">
+      <created>1662284493660</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1662284493660</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
