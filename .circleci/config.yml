@@ -53,7 +53,6 @@ executors:
           POSTGRES_PASSWORD: ""
 
 commands:
-
   restore-npm-cache:
     description: |
       Restore NPM packages from cache, so the setup script can make use of them.
