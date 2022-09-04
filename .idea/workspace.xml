@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Fix ci-pipeline">
-      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Fix ci-pipeline" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -217,21 +214,7 @@
       <workItem from="1661192998791" duration="3594000" />
       <workItem from="1661583735877" duration="10997000" />
       <workItem from="1661705785316" duration="1908000" />
-      <workItem from="1661795782267" duration="6038000" />
-    </task>
-    <task id="LOCAL-00008" summary="Add font configuration to TailwindCSS">
-      <created>1661105334065</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1661105334065</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Add Circle CI initial config">
-      <created>1661195727429</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1661195727429</updated>
+      <workItem from="1661795782267" duration="6335000" />
     </task>
     <task id="LOCAL-00010" summary="Add Circle CI initial config">
       <created>1661196058323</created>
@@ -562,7 +545,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662284493660</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Fix ci-pipeline">
+      <created>1662285085268</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1662285085269</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Fix ci-pipeline">
+      <created>1662285226367</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1662285226367</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
