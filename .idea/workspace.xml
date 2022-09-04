@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Replace template project name">
-      <change afterPath="$PROJECT_DIR$/bin/ci-audits" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/ci-bundler" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/ci-linter" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/ci-tests" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Albert-Template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Albert-Template.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/setup" beforeDir="false" afterPath="$PROJECT_DIR$/bin/setup" afterDir="false" />
-    </list>
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Add scripts for CI &amp; run CI pipeline with scripts" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -224,14 +214,7 @@
       <workItem from="1661192998791" duration="3594000" />
       <workItem from="1661583735877" duration="10997000" />
       <workItem from="1661705785316" duration="1908000" />
-      <workItem from="1661795782267" duration="4214000" />
-    </task>
-    <task id="LOCAL-00001" summary="First commit">
-      <created>1660494713128</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1660494713128</updated>
+      <workItem from="1661795782267" duration="4565000" />
     </task>
     <task id="LOCAL-00002" summary="Add ViewComponent &amp; Lookbook gems">
       <created>1660583122150</created>
@@ -569,7 +552,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662281346067</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Add scripts for CI &amp; run CI pipeline with scripts">
+      <created>1662283251999</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1662283252000</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -608,6 +598,7 @@
     <MESSAGE value="Update bundlewatch config" />
     <MESSAGE value="Fix linter issues" />
     <MESSAGE value="Replace template project name" />
-    <option name="LAST_COMMIT_MESSAGE" value="Replace template project name" />
+    <MESSAGE value="Add scripts for CI &amp; run CI pipeline with scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add scripts for CI &amp; run CI pipeline with scripts" />
   </component>
 </project>
