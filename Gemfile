@@ -72,6 +72,9 @@ group :development, :test do
   # Monitor for detection of N+1 queries in project
   gem "bullet"
 
+  # Security Audit for installed gems
+  gem "bundle-audit"
+
   ## Linter Gems
   # Rubocop Linter
   gem "rubocop", "~> 1.36", require: false
