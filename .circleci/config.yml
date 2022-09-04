@@ -159,6 +159,7 @@ jobs:
     executor: ruby
     steps:
       - checkout
+      - restore-gems-cache
       - restore-npm-cache
       - compile-assets
       - run:
