@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Change CI script permissions">
-      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/setup" beforeDir="false" afterPath="$PROJECT_DIR$/bin/setup" afterDir="false" />
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Fix ci-pipeline">
+      <change beforePath="$PROJECT_DIR$/bin/ci-audits" beforeDir="false" afterPath="$PROJECT_DIR$/bin/ci-audits" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,21 +216,7 @@
       <workItem from="1661192998791" duration="3594000" />
       <workItem from="1661583735877" duration="10997000" />
       <workItem from="1661705785316" duration="1908000" />
-      <workItem from="1661795782267" duration="4887000" />
-    </task>
-    <task id="LOCAL-00003" summary="Added configuration for TailwindCSS">
-      <created>1661080322717</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1661080322717</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Added configuration for TailwindCSS">
-      <created>1661080328093</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1661080328093</updated>
+      <workItem from="1661795782267" duration="5211000" />
     </task>
     <task id="LOCAL-00005" summary="Fix TailwindCSS content configuration">
       <created>1661080785485</created>
@@ -562,7 +547,21 @@
       <option name="project" value="LOCAL" />
       <updated>1662283590286</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Fix ci-pipeline">
+      <created>1662283914072</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1662283914072</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Fix ci-pipeline">
+      <created>1662284106214</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1662284106214</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -603,6 +602,7 @@
     <MESSAGE value="Replace template project name" />
     <MESSAGE value="Add scripts for CI &amp; run CI pipeline with scripts" />
     <MESSAGE value="Change CI script permissions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change CI script permissions" />
+    <MESSAGE value="Fix ci-pipeline" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix ci-pipeline" />
   </component>
 </project>

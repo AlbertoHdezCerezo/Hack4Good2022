@@ -20,10 +20,10 @@ FileUtils.chdir APP_ROOT do
 
   puts "\n ### Brakeman Inspector"
   puts "\n ----------------------"
-  system! "brakeman"
+  system! "bundle exec brakeman"
 
   puts "\n ### Bundle Audit Inspector"
   puts "\n --------------------------"
   system! "gem install bundler-audit"
-  system! "bundle-audit check --update"
+  system! "bundle exec bundle-audit check --update"
 end
