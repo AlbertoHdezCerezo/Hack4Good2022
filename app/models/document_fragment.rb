@@ -10,6 +10,16 @@ class DocumentFragment < ApplicationRecord
     def tag
       name
     end
+
+    # Define how to map Document Fragment +content+ to its tag
+    # markdown representation via string interpolation.
+    #
+    # (Example for H1) "#%{content}"
+    def markdown_representation
+      raise "DocumentFragment class #{name} does not define markdown_representation method.
+             Make sure to define a method that specifies how fragment content will be mapped
+             to its respective Markdown representation"
+    end
   end
 
   # Associations
@@ -18,5 +28,9 @@ class DocumentFragment < ApplicationRecord
   # Validations
   validates :position, numericality: { only_integer: true, greater_than: 0 }
 
-  delegate :tag, to: :class
+  delegate :tag, :markdown_representation, to: :class
+
+  def to_md
+    format(markdown_representation, content:)
+  end
 end

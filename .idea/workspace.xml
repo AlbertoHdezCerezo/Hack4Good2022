@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Added DocumentFragments model &amp; defined concern for STI subclasses preload">
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Added DocumentFragment fixtures">
+      <change afterPath="$PROJECT_DIR$/test/models/document_fragments/h1_test.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/models/document_fragments/p_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/document_fragment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/document_fragment.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/document_fragments/h1.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/document_fragments/h1.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/document_fragments/p.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/document_fragments/p.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,31 +66,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert/bin&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/eslint&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/prettier&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/RubyMine.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "/Users/alberto-mac/Desktop/Projects/Albert/Albert/test/models/document_fragments",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/eslint",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/prettier",
+    "ruby.rails.projectView.checked": "true",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable",
+    "ts.external.directory.path": "/Applications/RubyMine.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/models/document_fragments" />
+      <recent name="$PROJECT_DIR$/test/fixtures" />
       <recent name="$PROJECT_DIR$/bin" />
       <recent name="$PROJECT_DIR$/test/components/previews/common" />
       <recent name="$PROJECT_DIR$/app/components" />
-      <recent name="$PROJECT_DIR$/app/assets/stylesheets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test/system/components" />
@@ -222,14 +228,7 @@
       <workItem from="1661705785316" duration="1908000" />
       <workItem from="1661795782267" duration="11273000" />
       <workItem from="1662309020034" duration="4732000" />
-      <workItem from="1662475262925" duration="1345000" />
-    </task>
-    <task id="LOCAL-00014" summary="Fix rails bundler install">
-      <created>1661584646991</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1661584646991</updated>
+      <workItem from="1662475262925" duration="2442000" />
     </task>
     <task id="LOCAL-00015" summary="Optimize bundler installation with a new bundler executor">
       <created>1661584875335</created>
@@ -567,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662407164536</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Added DocumentFragment fixtures">
+      <created>1662485956603</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1662485956604</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -585,7 +591,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add ViewComponent &amp; Lookbook gems" />
     <MESSAGE value="Added configuration for TailwindCSS" />
     <MESSAGE value="Fix TailwindCSS content configuration" />
     <MESSAGE value="Fix sample component test" />
@@ -610,6 +615,7 @@
     <MESSAGE value="Fix ci-pipeline" />
     <MESSAGE value="Create Document model" />
     <MESSAGE value="Added DocumentFragments model &amp; defined concern for STI subclasses preload" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added DocumentFragments model &amp; defined concern for STI subclasses preload" />
+    <MESSAGE value="Added DocumentFragment fixtures" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added DocumentFragment fixtures" />
   </component>
 </project>
