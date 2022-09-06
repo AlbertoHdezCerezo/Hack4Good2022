@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Added DocumentFragment fixtures">
-      <change afterPath="$PROJECT_DIR$/test/models/document_fragments/h1_test.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/models/document_fragments/p_test.rb" afterDir="false" />
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Added logic to convert DocumentFragment content to Markdown formatted text">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/document_fragment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/document_fragment.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/document_fragments/h1.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/document_fragments/h1.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/document_fragments/p.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/document_fragments/p.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,14 +225,7 @@
       <workItem from="1661705785316" duration="1908000" />
       <workItem from="1661795782267" duration="11273000" />
       <workItem from="1662309020034" duration="4732000" />
-      <workItem from="1662475262925" duration="2442000" />
-    </task>
-    <task id="LOCAL-00015" summary="Optimize bundler installation with a new bundler executor">
-      <created>1661584875335</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1661584875335</updated>
+      <workItem from="1662475262925" duration="2930000" />
     </task>
     <task id="LOCAL-00016" summary="Optimize bundler installation with a new bundler executor">
       <created>1661584913573</created>
@@ -573,7 +563,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662485956604</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="Added logic to convert DocumentFragment content to Markdown formatted text">
+      <created>1662486895012</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1662486895012</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,7 +588,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added configuration for TailwindCSS" />
     <MESSAGE value="Fix TailwindCSS content configuration" />
     <MESSAGE value="Fix sample component test" />
     <MESSAGE value="Add tailwind configuration preview" />
@@ -616,6 +612,7 @@
     <MESSAGE value="Create Document model" />
     <MESSAGE value="Added DocumentFragments model &amp; defined concern for STI subclasses preload" />
     <MESSAGE value="Added DocumentFragment fixtures" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added DocumentFragment fixtures" />
+    <MESSAGE value="Added logic to convert DocumentFragment content to Markdown formatted text" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added logic to convert DocumentFragment content to Markdown formatted text" />
   </component>
 </project>
