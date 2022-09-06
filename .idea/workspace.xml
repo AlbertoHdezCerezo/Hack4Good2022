@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Create Document model">
-      <change afterPath="$PROJECT_DIR$/app/models/concerns/sti_preload.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/document_fragments/h1.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/models/document_fragments/p.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Albert-Template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Albert-Template.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Added DocumentFragments model &amp; defined concern for STI subclasses preload">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/document.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/document.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/migrate/20220904135651_create_documents.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20220904135651_create_documents.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,14 +221,8 @@
       <workItem from="1661583735877" duration="10997000" />
       <workItem from="1661705785316" duration="1908000" />
       <workItem from="1661795782267" duration="11273000" />
-      <workItem from="1662309020034" duration="4691000" />
-    </task>
-    <task id="LOCAL-00013" summary="Add test workflow">
-      <created>1661584191150</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1661584191150</updated>
+      <workItem from="1662309020034" duration="4732000" />
+      <workItem from="1662475262925" duration="1345000" />
     </task>
     <task id="LOCAL-00014" summary="Fix rails bundler install">
       <created>1661584646991</created>
@@ -574,7 +560,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662307995484</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Added DocumentFragments model &amp; defined concern for STI subclasses preload">
+      <created>1662407164535</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1662407164536</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +585,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First commit" />
     <MESSAGE value="Add ViewComponent &amp; Lookbook gems" />
     <MESSAGE value="Added configuration for TailwindCSS" />
     <MESSAGE value="Fix TailwindCSS content configuration" />
@@ -617,6 +609,7 @@
     <MESSAGE value="Change CI script permissions" />
     <MESSAGE value="Fix ci-pipeline" />
     <MESSAGE value="Create Document model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Document model" />
+    <MESSAGE value="Added DocumentFragments model &amp; defined concern for STI subclasses preload" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added DocumentFragments model &amp; defined concern for STI subclasses preload" />
   </component>
 </project>
