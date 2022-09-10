@@ -5,7 +5,7 @@ module Layout
   class ApplicationLayoutComponent < ApplicationComponent
     # +<head>+ layout content
     class Head < ApplicationComponent
-      DEFAULT_TITLE = "Albert - The perfect markdown editor for Alberto"
+      DEFAULT_TITLE = I18n.t("application_title")
 
       META_CONFIG = {
         # Browser area in which page can be seen
