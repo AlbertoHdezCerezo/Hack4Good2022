@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Added logic to parse markdown and markdown content to HTML">
-      <change afterPath="$PROJECT_DIR$/app/controllers/concerns/document_setters.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/editor/application_controller.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/controllers/editor/documents_controller.rb" afterDir="false" />
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Set up new editor document controller and routes.">
+      <change afterPath="$PROJECT_DIR$/app/components/editor/documents/new_component.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/layout/application_layout_component.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/components/previews/application_component_preview.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/components/previews/layout/application_layout_component_preview.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/components/previews/layout/application_layout_component_preview/configurable.html.haml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/components/previews/layout/application_layout_component_preview/default.html.haml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.haml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,32 +68,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert/test/models/document_fragments&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/eslint&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/prettier&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/RubyMine.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "/Users/alberto-mac/Desktop/Projects/Albert/Albert/test/components/previews/layout/application_layout_component_preview",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/eslint",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/prettier",
+    "ruby.rails.projectView.checked": "true",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable",
+    "ts.external.directory.path": "/Applications/RubyMine.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test/components/previews/layout/application_layout_component_preview" />
+      <recent name="$PROJECT_DIR$/test/components/previews/layout" />
+      <recent name="$PROJECT_DIR$/app/views/editor/documents" />
       <recent name="$PROJECT_DIR$/test/models/document_fragments" />
       <recent name="$PROJECT_DIR$/test/fixtures" />
-      <recent name="$PROJECT_DIR$/bin" />
-      <recent name="$PROJECT_DIR$/test/components/previews/common" />
-      <recent name="$PROJECT_DIR$/app/components" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test/system/components" />
@@ -228,14 +231,7 @@
       <workItem from="1661795782267" duration="11273000" />
       <workItem from="1662309020034" duration="4732000" />
       <workItem from="1662475262925" duration="3681000" />
-      <workItem from="1662808239379" duration="1518000" />
-    </task>
-    <task id="LOCAL-00018" summary="Optimize bundler installation with a new bundler executor">
-      <created>1661585367334</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1661585367334</updated>
+      <workItem from="1662808239379" duration="5088000" />
     </task>
     <task id="LOCAL-00019" summary="Optimize bundler installation with a new bundler executor">
       <created>1661585492234</created>
@@ -573,7 +569,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662808884728</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Set up new editor document controller and routes.">
+      <created>1662809972874</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1662809972874</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,7 +594,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add tailwind configuration preview" />
     <MESSAGE value="Add font configuration to TailwindCSS" />
     <MESSAGE value="Add Circle CI initial config" />
     <MESSAGE value="Add npm/gem caching and db setup jobs to CI pipeline" />
@@ -616,6 +618,7 @@
     <MESSAGE value="Added logic to convert DocumentFragment content to Markdown formatted text" />
     <MESSAGE value="Added Markdown parser gems" />
     <MESSAGE value="Added logic to parse markdown and markdown content to HTML" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added logic to parse markdown and markdown content to HTML" />
+    <MESSAGE value="Set up new editor document controller and routes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Set up new editor document controller and routes." />
   </component>
 </project>
