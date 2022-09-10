@@ -30,7 +30,12 @@ class DocumentFragment < ApplicationRecord
 
   delegate :tag, :markdown_representation, to: :class
 
+  # Interpolates content in the fragment markdown representation
   def to_md
     format(markdown_representation, content:)
+  end
+
+  def to_html
+    MarkdownParser.parse(to_md)
   end
 end
