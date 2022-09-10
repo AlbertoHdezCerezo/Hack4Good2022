@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Added Markdown parser gems">
-      <change afterPath="$PROJECT_DIR$/app/lib/markdown_parser.rb" afterDir="false" />
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Added logic to parse markdown and markdown content to HTML">
+      <change afterPath="$PROJECT_DIR$/app/controllers/concerns/document_setters.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/editor/application_controller.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/editor/documents_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/document_fragment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/document_fragment.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,14 +228,7 @@
       <workItem from="1661795782267" duration="11273000" />
       <workItem from="1662309020034" duration="4732000" />
       <workItem from="1662475262925" duration="3681000" />
-      <workItem from="1662808239379" duration="385000" />
-    </task>
-    <task id="LOCAL-00017" summary="Optimize bundler installation with a new bundler executor">
-      <created>1661585248471</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1661585248471</updated>
+      <workItem from="1662808239379" duration="1518000" />
     </task>
     <task id="LOCAL-00018" summary="Optimize bundler installation with a new bundler executor">
       <created>1661585367334</created>
@@ -571,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662488235588</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Added logic to parse markdown and markdown content to HTML">
+      <created>1662808884727</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1662808884728</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +591,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix sample component test" />
     <MESSAGE value="Add tailwind configuration preview" />
     <MESSAGE value="Add font configuration to TailwindCSS" />
     <MESSAGE value="Add Circle CI initial config" />
@@ -614,6 +615,7 @@
     <MESSAGE value="Added DocumentFragment fixtures" />
     <MESSAGE value="Added logic to convert DocumentFragment content to Markdown formatted text" />
     <MESSAGE value="Added Markdown parser gems" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Markdown parser gems" />
+    <MESSAGE value="Added logic to parse markdown and markdown content to HTML" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added logic to parse markdown and markdown content to HTML" />
   </component>
 </project>
