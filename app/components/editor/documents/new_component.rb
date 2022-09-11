@@ -6,7 +6,7 @@ module Editor
     class NewComponent < ApplicationComponent
       attr_reader :document
 
-      def initialize(document:, html_attributes: nil)
+      def initialize(document:, html_attributes: {})
         @document = document
         super(html_attributes:)
       end

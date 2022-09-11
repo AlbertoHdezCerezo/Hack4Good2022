@@ -2,8 +2,8 @@
 
 # Renders Tailwind Config Viewer HTML
 module Editor
-  module Documents
-    class EditComponent < ApplicationComponent
+  module Common
+    class DocumentComponent < ApplicationComponent
       attr_reader :document
 
       def initialize(document:, html_attributes: {})
@@ -12,11 +12,7 @@ module Editor
       end
 
       def call
-        render Editor::Layout::PageBodyComponent.new do
-          tag.div(**wrapper_attributes) do
-            render Editor::Common::DocumentComponent.new(document:)
-          end
-        end
+        render DocumentFragmentComponent.with_collection(document.document_fragments)
       end
     end
   end

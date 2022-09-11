@@ -48,6 +48,9 @@ module Layout
           # Content Security Policy meta tag:
           # https://stackoverflow.com/questions/30280370/how-does-content-security-policy-csp-work
           concat(csp_meta_tag)
+
+          concat(stylesheet_link_tag("application", media: "all", "data-turbolinks-track" => true))
+          concat(javascript_include_tag("application", media: "all", "data-turbolinks-track" => true))
         end
       end
     end

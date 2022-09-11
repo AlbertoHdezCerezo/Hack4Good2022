@@ -3,7 +3,7 @@
 module.exports = {
   plugins: [
     // Imports TailwindCSS
-    require('tailwindcss')('./config/tailwind.config.js'),
+    require('tailwindcss')('./config/base.config.js'),
     // Easy importing of local, node or web CSS files
     // https://github.com/postcss/postcss-import
     require('postcss-import'),
