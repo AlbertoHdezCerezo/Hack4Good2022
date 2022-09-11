@@ -3,7 +3,7 @@
 # Renders Tailwind Config Viewer HTML
 module Editor
   module Documents
-    class NewComponent < ApplicationComponent
+    class EditComponent < ApplicationComponent
       attr_reader :document
 
       def initialize(document:, html_attributes: nil)

@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Add preview for application component">
-      <change afterPath="$PROJECT_DIR$/app/components/layout/application_layout_component.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/system/components/layout/application_layout_component_test.rb" afterDir="false" />
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Add translations to layout">
+      <change afterPath="$PROJECT_DIR$/app/components/editor/documents/edit_component.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/editor/layout/page_body_component.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/editor/documents/edit.html.haml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/components/previews/editor/documents/edit_component_preview.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/components/previews/editor/documents/new_component_preview.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/editor/documents/new_component.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/editor/documents/new_component.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/layout/application_layout_component.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/layout/application_layout_component.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/editor/documents/new.html.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/editor/documents/new.html.haml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/application_system_test_case.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/application_system_test_case.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +76,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "/Users/alberto-mac/Desktop/Projects/Albert/Albert/app/components/layout",
+    "last_opened_file_path": "/Users/alberto-mac/Desktop/Projects/Albert/Albert/test/components/previews/editor/documents",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.selected.package.eslint": "/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/eslint",
@@ -85,11 +91,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/components/layout" />
-      <recent name="$PROJECT_DIR$/test/system/components/layout" />
-      <recent name="$PROJECT_DIR$/test/components/previews/layout/application_layout_component_preview" />
-      <recent name="$PROJECT_DIR$/test/components/previews/layout" />
+      <recent name="$PROJECT_DIR$/test/components/previews/editor/documents" />
       <recent name="$PROJECT_DIR$/app/views/editor/documents" />
+      <recent name="$PROJECT_DIR$/app/components/editor/documents" />
+      <recent name="$PROJECT_DIR$/config/locales" />
+      <recent name="$PROJECT_DIR$/app/components/layout" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test/system/components" />
@@ -227,14 +233,7 @@
       <workItem from="1661795782267" duration="11273000" />
       <workItem from="1662309020034" duration="4732000" />
       <workItem from="1662475262925" duration="3681000" />
-      <workItem from="1662808239379" duration="5700000" />
-    </task>
-    <task id="LOCAL-00020" summary="Optimize bundler installation with a new bundler executor">
-      <created>1661585613906</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1661585613906</updated>
+      <workItem from="1662808239379" duration="8042000" />
     </task>
     <task id="LOCAL-00021" summary="Optimize bundler installation with a new bundler executor">
       <created>1661585698442</created>
@@ -572,7 +571,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662813903140</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Add translations to layout">
+      <created>1662816717977</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1662816717977</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -590,7 +596,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add Circle CI initial config" />
     <MESSAGE value="Add npm/gem caching and db setup jobs to CI pipeline" />
     <MESSAGE value="Fix CI pipeline" />
     <MESSAGE value="Add test workflow" />
@@ -615,6 +620,7 @@
     <MESSAGE value="Added logic to parse markdown and markdown content to HTML" />
     <MESSAGE value="Set up new editor document controller and routes." />
     <MESSAGE value="Add preview for application component" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add preview for application component" />
+    <MESSAGE value="Add translations to layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add translations to layout" />
   </component>
 </project>

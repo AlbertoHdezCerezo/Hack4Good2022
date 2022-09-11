@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Layout
   # Component wrapper for +layouts/application.html+ view. Defines a consistent
   # application layout across all views that can be easily customized for page
