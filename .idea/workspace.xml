@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Add components, layout and previews for document editor">
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/base/_index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/base/fonts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/editor/_index.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/editor/common/document_component.rb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/editor/common/document_fragment_component.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.browserslistrc" beforeDir="false" afterPath="$PROJECT_DIR$/.browserslistrc" afterDir="false" />
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Fixing Tailwind configuration">
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/fonts.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.rubocop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.rubocop.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Procfile.dev" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile.dev" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.postcss.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.postcss.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.tailwind.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.tailwind.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.postcss.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.tailwind.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.tailwind.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/base/_index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/base/fonts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/editor/_index.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/common/tailwind_component.html.haml" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/common/tailwind_component.html.haml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/editor/documents/edit_component.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/editor/documents/edit_component.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/editor/documents/new_component.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/editor/documents/new_component.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/layout/application_layout_component.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/layout/application_layout_component.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,11 +98,11 @@
       <recent name="$PROJECT_DIR$/config/locales" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/stylesheets/base" />
+      <recent name="$PROJECT_DIR$/app/assets/stylesheets" />
       <recent name="$PROJECT_DIR$/app/components/editor" />
       <recent name="$PROJECT_DIR$/test/system/components" />
       <recent name="$PROJECT_DIR$/test/components/previews" />
-      <recent name="$PROJECT_DIR$/config" />
-      <recent name="$PROJECT_DIR$/app/javascript/css" />
     </key>
   </component>
   <component name="RunManager" selected="Rails.Development: Albert-Template">
@@ -241,14 +234,7 @@
       <workItem from="1661795782267" duration="11273000" />
       <workItem from="1662309020034" duration="4732000" />
       <workItem from="1662475262925" duration="3681000" />
-      <workItem from="1662808239379" duration="12225000" />
-    </task>
-    <task id="LOCAL-00022" summary="Refactor job steps into components">
-      <created>1661586051499</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1661586051499</updated>
+      <workItem from="1662808239379" duration="17069000" />
     </task>
     <task id="LOCAL-00023" summary="Refactor job steps into commands">
       <created>1661586803078</created>
@@ -586,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662888430137</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="Fixing Tailwind configuration">
+      <created>1662892655447</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1662892655447</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,7 +597,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix CI pipeline" />
     <MESSAGE value="Add test workflow" />
     <MESSAGE value="Fix rails bundler install" />
     <MESSAGE value="Optimize bundler installation with a new bundler executor" />
@@ -629,6 +621,7 @@
     <MESSAGE value="Add preview for application component" />
     <MESSAGE value="Add translations to layout" />
     <MESSAGE value="Add components, layout and previews for document editor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add components, layout and previews for document editor" />
+    <MESSAGE value="Fixing Tailwind configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing Tailwind configuration" />
   </component>
 </project>
