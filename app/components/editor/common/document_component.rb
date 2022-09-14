@@ -12,7 +12,15 @@ module Editor
       end
 
       def call
-        render DocumentFragmentComponent.with_collection(document.document_fragments)
+        tag.div(**wrapper_attributes) do
+          render DocumentFragmentComponent.with_collection(document.document_fragments)
+        end
+      end
+
+      private
+
+      def default_css_classes
+        "prose prose-slate mx-auto lg:prose-lg"
       end
     end
   end
