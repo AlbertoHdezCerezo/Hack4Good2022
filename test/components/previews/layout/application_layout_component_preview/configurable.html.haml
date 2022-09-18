@@ -1,0 +1,4 @@
+= render Layout::ApplicationLayoutComponent.new do |l|
+  = l.head(title: params[:title], meta_tags: { sample_tag: "sample_value" }, html_attributes: { class: "head_class" })
+  = l.body(html_attributes: { class: "body_class" }) do
+    %h1 This is the application body

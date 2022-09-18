@@ -551,6 +551,8 @@ Style/MapToHash:
 Style/MethodCallWithArgsParentheses:
   Enabled: true
   AllowedMethods:
+    - concat
+    - render
     - require
     - require_relative
     - require_dependency
@@ -738,7 +740,7 @@ Style/UnpackFirst:
   Enabled: false
 
 Style/WordArray:
-  EnforcedStyle: brackets
+  EnforcedStyle: percent
 
 Style/YodaCondition:
   Enabled: false
