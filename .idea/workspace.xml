@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Fix style import with TailwindCSS">
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Add Tailwind Typography plugin">
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/base/editor.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/base/layout.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/assets/stylesheets/components/editable_document_fragment.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/editor/common/document_fragment_component/document_fragment_component_controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.tailwind.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.tailwind.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/editor/common/document_component.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/editor/common/document_component.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/application_component.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/application_component.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/editor/common/document_fragment_component.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/editor/common/document_fragment_component.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,14 +232,7 @@
       <workItem from="1661795782267" duration="11273000" />
       <workItem from="1662309020034" duration="4732000" />
       <workItem from="1662475262925" duration="3681000" />
-      <workItem from="1662808239379" duration="18063000" />
-    </task>
-    <task id="LOCAL-00024" summary="Refactor job steps into commands">
-      <created>1661586859677</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1661586859677</updated>
+      <workItem from="1662808239379" duration="21187000" />
     </task>
     <task id="LOCAL-00025" summary="Refactor job steps into commands">
       <created>1661587125891</created>
@@ -575,7 +570,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663180221330</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="Add Tailwind Typography plugin">
+      <created>1663181175696</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1663181175696</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -593,7 +595,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fix rails bundler install" />
     <MESSAGE value="Optimize bundler installation with a new bundler executor" />
     <MESSAGE value="Refactor job steps into components" />
     <MESSAGE value="Refactor job steps into commands" />
@@ -618,6 +619,7 @@
     <MESSAGE value="Add components, layout and previews for document editor" />
     <MESSAGE value="Fixing Tailwind configuration" />
     <MESSAGE value="Fix style import with TailwindCSS" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix style import with TailwindCSS" />
+    <MESSAGE value="Add Tailwind Typography plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Tailwind Typography plugin" />
   </component>
 </project>

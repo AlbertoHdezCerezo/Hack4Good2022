@@ -12,7 +12,26 @@ module Editor
       end
 
       def call
-        document_fragment.to_html
+        tag.div(**@wrapper_attributes) do
+          document_fragment.to_html
+        end
+      end
+
+      private
+
+      def default_html_attributes
+        super.merge(
+          {
+            data: {
+              controller: "editor-common-document-fragment-component",
+            },
+          }
+        )
+      end
+
+      # Default component HTML class attibute
+      def default_css_classes
+        "contents"
       end
     end
   end
