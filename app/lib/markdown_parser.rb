@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require "rouge/plugins/redcarpet"
 
 # Markdown to HTML parser
@@ -30,7 +31,7 @@ class MarkdownParser
     end
 
     def parse(markdown_content)
-      parser.render(markdown_content).html_safe
+      parser.render(markdown_content)
     end
   end
 end

@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class DocumentFragment < ApplicationRecord
   include StiPreload
 
   class << self
     def sti_descendants
-      %w(DocumentFragments::H1 DocumentFragments::P)
+      %w[DocumentFragments::H1 DocumentFragments::P].freeze
     end
 
     # Fragment Markdown Tag

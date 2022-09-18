@@ -740,7 +740,7 @@ Style/UnpackFirst:
   Enabled: false
 
 Style/WordArray:
-  EnforcedStyle: brackets
+  EnforcedStyle: percent
 
 Style/YodaCondition:
   Enabled: false
