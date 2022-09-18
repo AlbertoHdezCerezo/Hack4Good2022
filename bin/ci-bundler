@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+require "fileutils"
+
+# path to your application root.
+APP_ROOT = File.expand_path("..", __dir__)
+
+# SET-UP CONFIGURATION VARIABLES
+# ------------------------------
+GEM_PATH =
+
+def system!(*args)
+  system(*args) || abort("\n== Command #{args} failed ==")
+end
+
+# SET-UP SCRIPT
+# -------------
+FileUtils.chdir APP_ROOT do
+  puts "\n ## Running Bundler Monitors"
+  puts "\n ==========================="
+
+  puts "\n ## Bundlewatch monitor"
+  puts "\n ----------------------"
+  system! "yarn run bundlewatch --config .bundlewatch.config.js"
+end
