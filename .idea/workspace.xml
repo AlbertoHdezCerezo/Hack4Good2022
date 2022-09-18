@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Add basic logic for document JS controlling">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/editor/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/editor/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/markdown_parser.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/markdown_parser.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/document_fragment.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/document_fragment.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/document_fragments/h1.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/document_fragments/h1.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/document_fragments/p.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/document_fragments/p.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +30,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="feature/markdown-models" />
-                    <option name="lastUsedInstant" value="1662299568" />
+                    <option name="lastUsedInstant" value="1663507267" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="feature/configure-scripts" />
@@ -66,25 +61,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "/Users/alberto-mac/Desktop/Projects/Albert/Albert/app/components/editor/common/document_component",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/eslint",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/prettier",
-    "ruby.rails.projectView.checked": "true",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable",
-    "ts.external.directory.path": "/Applications/RubyMine.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert/app/components/editor/common/document_component&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/eslint&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/prettier&quot;,
+    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/RubyMine.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/components/editor/common/document_component" />
