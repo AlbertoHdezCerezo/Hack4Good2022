@@ -6,10 +6,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  namespace :editor do
-    resources :documents, only: [:show, :new]
-  end
-
   # LookBook Engine
   # More information: https://github.com/allmarkedup/lookbook#2-mount-the-lookbook-engine
   Rails.application.routes.draw do
