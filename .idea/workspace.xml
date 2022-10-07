@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Updated dependencies and Gemfile.lock" />
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Updated dependencies and Gemfile.lock">
+      <change afterPath="$PROJECT_DIR$/bin/render-build.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/render.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Albert-Template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Albert-Template.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/puma.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/puma.rb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,12 +35,8 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature/markdown-models" />
-                    <option name="lastUsedInstant" value="1663507267" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="feature/configure-scripts" />
-                    <option name="lastUsedInstant" value="1662281358" />
+                    <option name="branchName" value="enhancement/configure-deployment-pipeline-with-render" />
+                    <option name="lastUsedInstant" value="1665158562" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
@@ -59,25 +63,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "/Users/alberto-mac/Desktop/Hack4Good2022",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.selected.package.eslint": "/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/eslint",
-    "node.js.selected.package.standard": "",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/prettier",
-    "ruby.rails.projectView.checked": "true",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "vcs.Git",
-    "ts.external.directory.path": "/Applications/RubyMine.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/alberto-mac/Desktop/Hack4Good2022&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/eslint&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/prettier&quot;,
+    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Applications/RubyMine.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/components/editor/common/document_component" />
@@ -225,14 +229,8 @@
       <workItem from="1662475262925" duration="3681000" />
       <workItem from="1662808239379" duration="21952000" />
       <workItem from="1664096091976" duration="497000" />
-      <workItem from="1665156331398" duration="805000" />
-    </task>
-    <task id="LOCAL-00031" summary="Add linter job to CI">
-      <created>1661587941400</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1661587941400</updated>
+      <workItem from="1665156331398" duration="1228000" />
+      <workItem from="1665158248748" duration="477000" />
     </task>
     <task id="LOCAL-00032" summary="Add linter job to CI">
       <created>1661588111759</created>
@@ -570,7 +568,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665156945178</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Updated dependencies and Gemfile.lock">
+      <created>1665157510159</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1665157510160</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
