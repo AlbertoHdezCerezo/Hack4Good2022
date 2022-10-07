@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Update NPM package">
+    <list default="true" id="78b643cb-2c76-4a97-bce1-93374571b6d4" name="Changes" comment="Removed unnecessary models and so on">
+      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Albert-Template.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Albert-Template.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/editor/common/document_component.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/editor/common/document_component.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/editor/common/document_fragment_component.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/editor/common/document_fragment_component.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/editor/common/document_component.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/editor/common/document_fragment_component.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/editor/documents/edit_component.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/editor/documents/new_component.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/editor/layout/page_body_component.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/editor/application_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/editor/documents_controller.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/markdown_parser.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/concerns/sti_preload.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/document.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/document_fragment.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20220904135651_create_documents.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20220904161625_create_document_fragments.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20220904164827_add_document_to_document_fragment.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/previews/editor/documents/edit_component_preview.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/components/previews/editor/documents/new_component_preview.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/document_fragment_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/document_fragments/h1_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/document_fragments/p_test.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/document_test.rb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,25 +84,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert/app/components/editor/common/document_component&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/eslint&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/prettier&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/RubyMine.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "/Users/alberto-mac/Desktop/Hack4Good2022",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/eslint",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "/Users/alberto-mac/Desktop/Projects/Albert/Albert-Template/node_modules/prettier",
+    "ruby.rails.projectView.checked": "true",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "ts.external.directory.path": "/Applications/RubyMine.app/Contents/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/components/editor/common/document_component" />
@@ -231,6 +250,7 @@
       <workItem from="1662475262925" duration="3681000" />
       <workItem from="1662808239379" duration="21952000" />
       <workItem from="1664096091976" duration="497000" />
+      <workItem from="1665156331398" duration="239000" />
     </task>
     <task id="LOCAL-00028" summary="Add linter job to CI">
       <created>1661587610146</created>
@@ -593,7 +613,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add linter job to CI" />
     <MESSAGE value="Add dependabot" />
     <MESSAGE value="Add bundlewatch CI job" />
     <MESSAGE value="Update bundlewatch config" />
@@ -618,6 +637,7 @@
     <MESSAGE value="Add basic logic for document JS controlling" />
     <MESSAGE value="Update gemfile.lock" />
     <MESSAGE value="Update NPM package" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update NPM package" />
+    <MESSAGE value="Removed unnecessary models and so on" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed unnecessary models and so on" />
   </component>
 </project>
